@@ -1,0 +1,25 @@
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+//***** CALL size TEMPLATES
+@include for-phone('250px');
+@include for-tablet('620px');
+@include for-desktop('1000px');
+
+//SIZE TEMPLATES
+@mixin for-phone($size) {
+  @media only screen and (min-width: $size) {
+  }
+}
+@mixin for-tablet($size) {
+  @media only screen and (min-width: $size) {
+  }
+}
+
+@mixin for-desktop($size) {
+  @media only screen and (min-width: $size) {
+  }
+}

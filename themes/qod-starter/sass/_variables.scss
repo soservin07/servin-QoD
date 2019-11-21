@@ -1,0 +1,34 @@
+//*******************site width
+$fixed__width: 1080px;
+//*************BORDeER
+$dashed__border: 1px dashed #ffffff;
+
+//**********line height
+$base__line-height: 1.5;
+
+// Colors
+
+$color__background-body: #fff;
+$color__text-main: #404040;
+
+$color__background-screen: #f1f1f1;
+$color__text-screen: #21759b;
+
+$color__background-hr: #ccc;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+$color__border-abbr: #666;
+
+$color__link: royalblue;
+$color__link-visited: purple;
+$color__link-hover: midnightblue;
+
+// Typography
+$font__main-s: 16px;
+$font__main-c: #ffffff;
+$font__main: 'Exo';
+
+$font__code: $font__main;
+$font__pre: $font__main;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;

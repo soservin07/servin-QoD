@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+# Embedded Fonts
+--------------------------------------------------------------*/
+$exo-light-italic: url('../qod-resources/assets/fonts/exo-lightitalic-webfont.ttf');
+$exo-light: url('../qod-resources/assets/fonts/exo-light-webfont.ttf');
+$exo-med-italic: url('../qod-resources/assets/fonts/exo-mediumitalic-webfont.ttf');
+$exo-med-light: url('../qod-resources/assets/fonts/exo-medium-webfont.ttf');
+
+@font-face {
+  font-family: 'exo';
+  src: ($exo-light-italic);
+
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'exo-light';
+  src: $exo-light;
+
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'exo-med';
+  src: $exo-med-italic;
+
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'exo-med-light';
+  src: $exo-med-light;
+
+  font-weight: normal;
+  font-style: normal;
+}
