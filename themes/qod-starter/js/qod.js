@@ -1,24 +1,4 @@
-(function($) {
-  $restUrl =
-    window.location.origin +
-    '/qod/wp-json/wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1';
-  $data = '';
-  // console.log($restUrl);
-  let $site_title = jQuery(location).attr('href');
-  $site_title = $site_title.replace(window.location.origin + '/qod/', '');
-  $site_title = $site_title.replace('/', '');
-  if ($site_title != 'about-us') {
-    do_ajax();
-  } else if ($site_title != 'archives') {
-    do_ajax();
-  }
-  $(document).on('click', '.btn-show', function(e) {
-    // console.log($restUrl);
-    window.location.href = window.location.href + $data[0]['slug'];
-  });
-})(jQuery);
-
-function do_ajax() {
+function doajax(){
   $.ajax({
     type: 'GET',
     url: $restUrl,
@@ -39,6 +19,30 @@ function do_ajax() {
       $('.entry-content').prepend($data[0]['content']['rendered']);
     })
     .fail(function(e) {
-      console.log('ERROR :');
+      console.log('ERROR : '+e);
     });
 }
+
+(function($) {
+  $restUrl =window.location.origin +'/qod/wp-json/wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1';
+  let $data,$restUrl
+  // console.log($restUrl);
+  let $site_title = jQuery(location).attr('href');
+  $site_title = $site_title.replace(window.location.origin + '/qod/', '');
+  $site_title = $site_title.replace('/', '');
+
+  if ($site_title != 'about-us') {
+    doajax();
+  } else if ($site_title != 'archives') {
+    doajax();
+  }
+  $(document).on('click', '.btn-show', function(e) {
+    // console.log($restUrl);
+    window.location.href = window.location.href + $data[0]['slug'];
+  });
+
+  
+
+})(jQuery);
+
+

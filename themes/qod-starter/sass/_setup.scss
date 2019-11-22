@@ -1,0 +1,45 @@
+a{
+    text-decoration: none;
+    &:hover{
+        cursor: pointer;
+    }
+}
+ul,li{
+    list-style-type: none;
+}
+.entry-title{
+    width:100%;
+    font-family: 'Exo';
+    
+}
+.entry-content{
+    width:100%;
+    margin:0 auto;
+    
+}
+.site-main{
+    width:60%;
+    margin:0 auto;
+    &:before{
+        font-family: "FontAwesome";
+         font-weight: 900;
+         font-size:5vmax;
+          content: '\f10e';
+          transform: rotate(180deg);
+          left:14%;
+          position: absolute;
+          line-height: 10vh;
+          top:0;
+    }
+    &:after{
+        font-family: "FontAwesome";
+         font-weight: 900;
+         font-size:5vmax;
+          content: '\f10e';
+          transform: rotate(360deg);
+          left:80%;
+          position: absolute ;
+          line-height: 10vh;
+          top:0;
+    }   
+}

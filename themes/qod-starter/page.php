@@ -9,12 +9,12 @@
 get_header();
 $imgArray = get_field('qod_logo');
 
-
 ?>
 
 <div id="primary" class="content-area">
+<img src="<?php echo $imgArray['url'] ?>" alt="quotes on dev" >
 	<main id="main" class="site-main" role="main">
-		<img src="<?= $imgArray['url'] ?>" alt="quotes on dev" />
+		
 
 		<section class="entry-content">
 			<?php // while (have_posts()) :
