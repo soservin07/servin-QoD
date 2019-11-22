@@ -89,19 +89,22 @@ require get_template_directory() . '/inc/metaboxes.php';
  * Custom WP API modifications.
  */
 require get_template_directory() . '/inc/api.php';
+if (function_exists('acf_add_options_page')) {
 
-//**START for CREATING API to show number of QUOTES */
-function qod_api()
-{
-	wp_enqueue_script('jquery');
-	wp_enqueue_script('qod_api', get_template_directory_uri() . '/build/js/qod.min.js', array('jquery'), false, true);
-	wp_localize_script('qod_api', 'api_vars', array(
-		// 'admin_url' => admin_url('admin-ajax.php'),
-		'rest' => esc_url_raw(rest_url()),
-		'nonce' => wp_create_nonce('wp_rest'),
-		'success' => 'Thanks, your submission was received!',
-		'failure' => 'Your submission could not be processed.',
-		'data' => get_posts('numberposts=-1')
-	));
+	acf_add_options_page();
 }
-add_action('wp_enqueue_scripts', 'qod_api');
+//**START for CREATING API to show number of QUOTES */
+// function qod_api()
+// {
+// 	wp_enqueue_script('jquery');
+// 	wp_enqueue_script('qod_api', get_template_directory_uri() . '/js/qod.js', array('jquery'), false, true);
+// 	wp_localize_script('qod_api', 'api_vars', array(
+// 		// 'admin_url' => admin_url('admin-ajax.php'),
+// 		'rest' => esc_url_raw(rest_url()),
+// 		'nonce' => wp_create_nonce('wp_rest'),
+// 		'success' => 'Thanks, your submission was received!',
+// 		'failure' => 'Your submission could not be processed.',
+// 		'data' => get_posts('numberposts=-1')
+// 	));
+// }
+// add_action('wp_enqueue_scripts', 'qod_api');

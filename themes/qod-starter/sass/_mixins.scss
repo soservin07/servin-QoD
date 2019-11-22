@@ -4,22 +4,22 @@
   margin-left: auto;
   margin-right: auto;
 }
-//***** CALL size TEMPLATES
-@include for-phone('250px');
-@include for-tablet('620px');
-@include for-desktop('1000px');
 
 //SIZE TEMPLATES
-@mixin for-phone($size) {
+@mixin for_phone($size) {
   @media only screen and (min-width: $size) {
   }
 }
-@mixin for-tablet($size) {
+@mixin for_tablet($size) {
   @media only screen and (min-width: $size) {
   }
 }
 
-@mixin for-desktop($size) {
+@mixin for_desktop($size) {
   @media only screen and (min-width: $size) {
   }
 }
+//***** CALL size TEMPLATES
+@include for_phone('250px');
+@include for_tablet('620px');
+@include for_desktop('1000px');
