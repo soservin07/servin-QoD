@@ -19,6 +19,11 @@ html {
 * {
   box-sizing: border-box;
   vertical-align: baseline;
+  scroll-behavior: smooth;
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
 }
 
 body {

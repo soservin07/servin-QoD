@@ -1,10 +1,3 @@
-// Center block
-@mixin center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 //SIZE TEMPLATES
 @mixin for_phone($size) {
   @media only screen and (min-width: $size) {
@@ -17,7 +10,100 @@
 
 @mixin for_desktop($size) {
   @media only screen and (min-width: $size) {
+    .site-content {
+      .content-area {
+        width: 1080px;
+        height: inherit;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        padding-top: 5%;
+        img {
+          height: 8vmax;
+          width: 100%;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .site-main {
+          display: flex;
+          flex-flow: row wrap;
+          .entry-content {
+            align-content: center;
+            line-height: 1.5;
+            & > p {
+              font-size: 2vmax;
+              font-weight: 400;
+            }
+            .p-source {
+              font-size: 1.8vmax;
+            }
+            .entry-title {
+              width: 100%;
+              text-align: left;
+              font-size: 3vmax;
+              margin: 1% 0;
+            }
+            .archive-content {
+              h3 {
+                color: white;
+                font-size: 2.5vmax;
+              }
+              ul {
+                width: 100%;
+                padding: 0 1%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                line-height: 1.5;
+                li {
+                  flex: 1 0 auto;
+                  margin: 0 1%;
+                  font-weight: 500;
+                  font-size: 2vmax;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
+
+  .site-footer {
+    width: 1080px;
+    margin: 0 auto;
+    .menu {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      li {
+        padding: 0 2%;
+        &:nth-child(2) {
+          border-right: 1px solid white;
+          border-left: 1px solid white;
+        }
+        &:nth-child(4) {
+          // border-right: 1px solid white;
+          border-left: 1px solid white;
+        }
+      }
+    }
+  }
+
+  //*******************SUBMIT QUOTE FORM
+  .quote-submit{
+    .txt-quote{
+      width:100%;
+    }
+    .btn-submit{
+      font-size:1.5vmax;
+    }
+  }
+
+  
 }
 //***** CALL size TEMPLATES
 @include for_phone('250px');

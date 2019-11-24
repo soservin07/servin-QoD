@@ -7,9 +7,12 @@
  */
 
 get_header();
+$imgArray = get_field('qod_logo');
+// var_dump($imgArray);
 ?>
 
 <div id="primary" class="content-area">
+	<img src="<?= $imgArray['url'] ?>" alt="quotes on dev">
 	<main id="main" class="site-main" role="main">
 
 		<?php //while (have_posts()) : the_post(); 

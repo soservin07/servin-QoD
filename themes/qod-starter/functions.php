@@ -60,14 +60,22 @@ add_filter('stylesheet_uri', 'qod_minified_css', 10, 2);
  */
 function qod_scripts()
 {
-	wp_enqueue_style('fontawesome','https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	wp_enqueue_style('fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	wp_enqueue_style('qod-style', get_template_directory_uri() . '/build/css/style.min.css');
 	wp_enqueue_script('jquery');
-	wp_enqueue_script('qod-script', get_template_directory_uri() . '/build/js/qod.min.js', array('jquery'), false, true);
+	wp_enqueue_script('qod-scripts', get_template_directory_uri() . '/build/js/qod.min.js', array('jquery'), false, true);
 
 	wp_enqueue_script('qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);
 	wp_enqueue_script('qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
-
+	wp_localize_script('qod-scripts', 'api_vars', array(
+		// 'admin_url' => admin_url('admin-ajax.php'),
+		'rest_url' => esc_url_raw(rest_url()),
+		'home_url' => home_url(),
+		'nonce' => wp_create_nonce('wp_rest'),
+		'success' => 'Thanks, your submission was received!',
+		'failure' => 'Your submission could not be processed.'
+		// 'data' => get_posts('numberposts=-1')
+	));
 	//here is where you localized script code will go
 }
 add_action('wp_enqueue_scripts', 'qod_scripts');
@@ -99,14 +107,15 @@ if (function_exists('acf_add_options_page')) {
 // function qod_api()
 // {
 // 	wp_enqueue_script('jquery');
-// 	wp_enqueue_script('qod_api', get_template_directory_uri() . '/js/qod.js', array('jquery'), false, true);
-// 	wp_localize_script('qod_api', 'api_vars', array(
+// 	wp_enqueue_script('qod_scripts', get_template_directory_uri() . '/build/js/qod.min.js', array('jquery'), false, true);
+// 	wp_localize_script('qod_scripts', 'api_vars', array(
 // 		// 'admin_url' => admin_url('admin-ajax.php'),
-// 		'rest' => esc_url_raw(rest_url()),
+// 		'rest_rul' => esc_url_raw(rest_url()),
+// 		'home_url' => home_url(),
 // 		'nonce' => wp_create_nonce('wp_rest'),
 // 		'success' => 'Thanks, your submission was received!',
-// 		'failure' => 'Your submission could not be processed.',
-// 		'data' => get_posts('numberposts=-1')
+// 		'failure' => 'Your submission could not be processed.'
+// 		// 'data' => get_posts('numberposts=-1')
 // 	));
 // }
 // add_action('wp_enqueue_scripts', 'qod_api');

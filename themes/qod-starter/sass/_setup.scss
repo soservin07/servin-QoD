@@ -1,45 +1,136 @@
-a{
-    text-decoration: none;
-    &:hover{
-        cursor: pointer;
+a {
+  font-family: 'exo';
+  text-decoration: none;
+  color: #0c0;
+  width: max-content;
+  word-break: unset;
+  &:hover {
+    cursor: pointer;
+    color: whitesmoke;
+    text-decoration: underline;
+  }
+}
+.btn-show, .btn-submit {
+  padding: 3%;
+  border: 1px solid #0c0;
+  border-radius: 0.5em;
+  background: transparent;
+  color: #0c0;
+  font-family: 'exo';
+  text-transform: capitalize;
+  box-shadow: unset;
+  text-shadow: unset;
+  font-size: 2vmax;
+  width:max-content;
+  &:hover {
+    cursor: pointer;
+    border-color: wheat;
+    box-shadow: unset;
+    text-shadow: unset;
+  }
+}
+.categories {
+  display: none;
+}
+p {
+  font-family: 'exo';
+  color: white;
+}
+h3 {
+  font-family: 'exo';
+}
+ul,
+li {
+  list-style-type: none;
+}
+body {
+  background: #222;
+}
+.site-content {
+  width: 100%;
+  height: inherit;
+}
+.content-area {
+  width: 100%;
+  height: 100%;
+}
+.entry-title {
+  width: 100%;
+  font-family: 'Exo';
+  display: inline-flex;
+  color: white;
+}
+.entry-content {
+  width: 100%;
+  margin: 0 auto;
+}
+.site-main {
+  width: 70%;
+  margin: 0 auto;
+  display: inline-flex;
+  //   border: 1px dotted red;
+  padding: 2%;
+  &:before {
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    font-size: 12vmax;
+    content: '\f10e';
+    transform: rotate(180deg);
+    left: 4%;
+    position: absolute;
+    // line-height: 10vh;
+    // top: 0;
+    color: #009100;
+  }
+  &:after {
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    font-size: 12vmax;
+    content: '\f10e';
+    transform: rotate(360deg);
+    right: 4%;
+    position: absolute;
+    // line-height: 10vh;
+    // top: 0;
+    color: #009100;
+  }
+}
+
+.archive-content {
+  h3 {
+    color: white;
+  }
+}
+
+.site-footer {
+  width: 100%;
+  .site-info {
+    width: 100%;
+    .menu-site_menu-container {
+      width: 100%;
     }
+  }
 }
-ul,li{
-    list-style-type: none;
-}
-.entry-title{
-    width:100%;
-    font-family: 'Exo';
-    
-}
+
+
+//****************SUBMIT QUOTE FORM
 .entry-content{
-    width:100%;
-    margin:0 auto;
-    
+  .txt-response{
+    font-size:1.5vmax !important;
+    display:none;
+  }
 }
-.site-main{
-    width:60%;
-    margin:0 auto;
-    &:before{
-        font-family: "FontAwesome";
-         font-weight: 900;
-         font-size:5vmax;
-          content: '\f10e';
-          transform: rotate(180deg);
-          left:14%;
-          position: absolute;
-          line-height: 10vh;
-          top:0;
-    }
-    &:after{
-        font-family: "FontAwesome";
-         font-weight: 900;
-         font-size:5vmax;
-          content: '\f10e';
-          transform: rotate(360deg);
-          left:80%;
-          position: absolute ;
-          line-height: 10vh;
-          top:0;
-    }   
+
+.login-required{
+  padding:10% 0;
+  display: flex;
+  flex-flow:column nowrap;
+  justify-content: space-around;
+  line-height: 1.6;
+  
+  p,a{
+    font-weight: 100;
+
+  }
+  
 }

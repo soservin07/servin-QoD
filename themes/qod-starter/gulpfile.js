@@ -31,7 +31,7 @@ gulp.task('sass', function() {
 
 gulp.task('lint', function() {
   return gulp
-    .src(['./js/*.js'])
+    .src(['./.js/*.js'])
     .pipe(prettyError())
     .pipe(eslint())
     .pipe(eslint.format())

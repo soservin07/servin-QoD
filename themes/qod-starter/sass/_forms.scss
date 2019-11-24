@@ -4,32 +4,32 @@
 
 /* Buttons */
 
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
-	font-size: .75rem;
-	line-height: 1;
-	padding: .6rem 1rem .4rem;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+// button,
+// input[type="button"],
+// input[type="reset"],
+// input[type="submit"] {
+// 	border: 1px solid;
+// 	border-color: #ccc #ccc #bbb;
+// 	border-radius: 3px;
+// 	background: #e6e6e6;
+// 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+// 	color: rgba(0, 0, 0, .8);
+// 	font-size: .75rem;
+// 	line-height: 1;
+// 	padding: .6rem 1rem .4rem;
+// 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 
-	&:hover {
-		border-color: #ccc #bbb #aaa;
-		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-	}
+// 	&:hover {
+// 		border-color: #ccc #bbb #aaa;
+// 		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+// 	}
 
-	&:active,
-	&:focus {
-		border-color: #aaa #bbb #bbb;
-		box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-	}
-}
+// 	&:active,
+// 	&:focus {
+// 		border-color: #aaa #bbb #bbb;
+// 		box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+// 	}
+// }
 
 /* Fields */
 
@@ -44,7 +44,7 @@ textarea {
 	border-radius: 3px;
 
 	&:focus {
-		color: #111;
+		color:#0c0;
 	}
 }
 
@@ -59,4 +59,35 @@ input[type="search"] {
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+//*******************SUBMIT QUOTE FORM
+.quote-submit{
+	display:flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	color:white;
+	width:100%;
+	label{
+			textarea, input{
+			border:1px solid #0c0;
+			border-radius: 0.5em;
+			background:transparent;
+			color:#0c0;
+			padding:2% 1%;
+			width:60%;
+			&:hover,&:focus{
+				border-color:wheat;
+			}
+			
+		}
+		p{
+			content:"* Please fill-up the text above, and don`t just leave a blank space";
+			color:rgb(255, 81, 0);
+			display:block;
+			clear:both;
+		}
+	}
+	&> *{
+		margin:1% 0;
+	}
 }

@@ -12,9 +12,8 @@ $imgArray = get_field('qod_logo');
 ?>
 
 <div id="primary" class="content-area">
-<img src="<?php echo $imgArray['url'] ?>" alt="quotes on dev" >
+	<img src="<?= $imgArray['url'] ?>" alt="quotes on dev" class="img-quote">
 	<main id="main" class="site-main" role="main">
-		
 
 		<section class="entry-content">
 			<?php // while (have_posts()) :
@@ -37,7 +36,10 @@ $imgArray = get_field('qod_logo');
 		</section>
 
 
-		<?php // endwhile; // End of the loop. 
+		<?php
+			if(is_page('submit')){
+				get_template_part('template-parts/page', 'submit');
+			}
 		?>
 
 	</main><!-- #main -->
