@@ -27,14 +27,14 @@
             <label >
                 Where did you find this quote? <span>(e.g. book name)</span>
                 <br>
-                <input type="text" name="txt-where" class="txt-where" aria-required="true" aria-invalid="false" required="true">
+                <input type="text" name="txt-where" class="txt-where" aria-required="true" aria-invalid="false">
             </label>
             <label >
                 Provide the URL of the quote source, if available
                 <br>
                 <input type="text" name="txt-url" class="txt-url" aria-required="true" aria-invalid="false" placeholder="ex: www.google.com">
             </label>
-            <input type="submit" value="Submit Quote" class="btn-submit">
+            <button type="button" value="Submit Quote" class="btn-submit">Submit Quote</button>
 			
             </form>
             <p class="txt-response">Thanks for the quote, submission was received!</p>
@@ -44,6 +44,8 @@
         <h2 class="entry-title">Submit a Quote</h2>
         <p class="sorry">Sorry, you must be logged in to submit a quote!</p>
 
-        <a href="#" class="login-auth" >Click here to login.</a>
+        <a href="<?=admin_url()?>" class="login-auth" >Click here to login.</a>
         </section>
-
+<?php
+    echo qod_get_quote_meta_fields(204,'rendered',true);
+?>

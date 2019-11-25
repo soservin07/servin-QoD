@@ -18,7 +18,7 @@
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
-        padding-top: 5%;
+        padding-top: 2%;
         img {
           height: 8vmax;
           width: 100%;
@@ -33,11 +33,11 @@
             align-content: center;
             line-height: 1.5;
             & > p {
-              font-size: 2vmax;
-              font-weight: 400;
+              font-size: 2.5vmax;
+              font-weight: 200;
             }
             .p-source {
-              font-size: 1.8vmax;
+              font-size: 1.4vmax;
             }
             .entry-title {
               width: 100%;
@@ -61,7 +61,7 @@
                   flex: 1 0 auto;
                   margin: 0 1%;
                   font-weight: 500;
-                  font-size: 2vmax;
+                  font-size: 1.5vmax;
                 }
               }
             }
@@ -72,7 +72,7 @@
   }
 
   .site-footer {
-    width: 1080px;
+    width: 1080px !important;
     margin: 0 auto;
     .menu {
       width: 100%;
@@ -92,6 +92,17 @@
       }
     }
   }
+  //*************archive-categories
+  .archive-content{
+    nav{
+      p{
+        font-size: 2vmax;
+      }
+      .p-author{
+        font-size: 1vmax;
+      }
+    }
+  }
 
   //*******************SUBMIT QUOTE FORM
   .quote-submit{
@@ -99,7 +110,7 @@
       width:100%;
     }
     .btn-submit{
-      font-size:1.5vmax;
+      font-size:1.4vmax;
     }
   }
 

@@ -11,7 +11,7 @@ a {
   }
 }
 .btn-show, .btn-submit {
-  padding: 3%;
+  padding: 2%;
   border: 1px solid #0c0;
   border-radius: 0.5em;
   background: transparent;
@@ -20,17 +20,15 @@ a {
   text-transform: capitalize;
   box-shadow: unset;
   text-shadow: unset;
-  font-size: 2vmax;
+  font-size: 1.5vmax;
   width:max-content;
+  margin:0 auto;
   &:hover {
     cursor: pointer;
     border-color: wheat;
     box-shadow: unset;
     text-shadow: unset;
   }
-}
-.categories {
-  display: none;
 }
 p {
   font-family: 'exo';
@@ -44,6 +42,7 @@ li {
   list-style-type: none;
 }
 body {
+  color:white;
   background: #222;
 }
 .site-content {
@@ -57,8 +56,10 @@ body {
 .entry-title {
   width: 100%;
   font-family: 'Exo';
+  font-weight: 200;
   display: inline-flex;
   color: white;
+  
 }
 .entry-content {
   width: 100%;
@@ -73,10 +74,10 @@ body {
   &:before {
     font-family: 'FontAwesome';
     font-weight: 900;
-    font-size: 12vmax;
+    font-size: 10vmax;
     content: '\f10e';
     transform: rotate(180deg);
-    left: 4%;
+    left: 14%;
     position: absolute;
     // line-height: 10vh;
     // top: 0;
@@ -85,10 +86,10 @@ body {
   &:after {
     font-family: 'FontAwesome';
     font-weight: 900;
-    font-size: 12vmax;
+    font-size: 10vmax;
     content: '\f10e';
     transform: rotate(360deg);
-    right: 4%;
+    right: 14%;
     position: absolute;
     // line-height: 10vh;
     // top: 0;
@@ -103,11 +104,20 @@ body {
 }
 
 .site-footer {
-  width: 100%;
+  width:1080px;
   .site-info {
-    width: 100%;
     .menu-site_menu-container {
       width: 100%;
+      .menu{
+        li{
+          &:nth-child(4){
+            &:before{
+              content:'Brought to you by ';
+              color:white;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -133,4 +143,21 @@ body {
 
   }
   
+}
+
+//*******************archive-CATEGORIES
+.archive-content{
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content: space-between;
+  padding: 2% 0;
+  nav{
+    padding: 3% 1%;
+    border-top:1px dotted gray;
+    border-bottom:1px dotted gray;
+  }
+  & >strong{
+    margin: 2% 0;
+    font-size: 1.5vmax;
+  }
 }
