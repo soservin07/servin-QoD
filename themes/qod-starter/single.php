@@ -12,9 +12,9 @@ $imgArray = get_field('qod_logo');
 ?>
 
 <div id="primary" class="content-area">
-	<img src="<?= $imgArray['url'] ?>" alt="quotes on dev">
+	
 	<main id="main" class="site-main" role="main">
-
+	<img src="<?=home_url() ?>/wp-content/uploads/2019/11/qod-logo.svg" alt="quotes on dev">
 		<?php //while (have_posts()) : the_post(); 
 		the_post();
 		?>
