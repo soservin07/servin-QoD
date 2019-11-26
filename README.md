@@ -4,7 +4,7 @@ Quotes on Dev for EVERYBODY! - [Servin's Quote's on Dev](https://github.com/sose
 
 ## ~>Front Page
 
-![Front Page](https://github.com/soservin07/servin-QoD/tree/master/screenshots/front-page.png)
+![FrontPage](https://github.com/soservin07/servin-QoD/blob/master/screenshots/front-page.png)
 
 ## Used Technologics
 
@@ -22,7 +22,7 @@ Quotes on Dev for EVERYBODY! - [Servin's Quote's on Dev](https://github.com/sose
 
 ## ~>Archive Page
 
-![Archive Page](https://github.com/soservin07/servin-QoD/tree/master/screenshots/archive-page.png)
+![ArchivePage](https://github.com/soservin07/servin-QoD/blob/master/screenshots//archive-page.png)
 
 ### SASS/CSS
 
@@ -38,8 +38,8 @@ Quotes on Dev for EVERYBODY! - [Servin's Quote's on Dev](https://github.com/sose
 
 ## ~>Category & Tags
 
-![Front Page](https://github.com/soservin07/servin-QoD/tree/master/screenshots/category-page.png)
-![Front Page](https://github.com/soservin07/servin-QoD/tree/master/screenshots/tag-page.png)
+![CategoryPage](https://github.com/soservin07/servin-QoD/blob/master/screenshots/category-page.png)
+![TagPage](https://github.com/soservin07/servin-QoD/blob/master/screenshots/tag-page.png)
 
 ### Typescript/Javascript
 
@@ -49,7 +49,7 @@ Quotes on Dev for EVERYBODY! - [Servin's Quote's on Dev](https://github.com/sose
 
 ## ~>Posting Quote Form
 
-![Front Page](https://github.com/soservin07/servin-QoD/tree/master/screenshots/quote-form.png)
+![QuoteForm](https://github.com/soservin07/servin-QoD/blob/master/screenshots/quote-form.png)
 
 ### Software
 
@@ -85,7 +85,7 @@ Quotes on Dev for EVERYBODY! - [Servin's Quote's on Dev](https://github.com/sose
 
 ## ~>Search Page
 
-![Front Page](https://github.com/soservin07/servin-QoD/tree/master/screenshots/search-page.png)
+![SearchPage](https://github.com/soservin07/servin-QoD/blob/master/screenshots/search-page.png)
 
 ### Online Resources
 
