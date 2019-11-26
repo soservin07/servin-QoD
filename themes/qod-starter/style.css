@@ -39,109 +39,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## All Archives Page
 	## Submit a Quote Page
 --------------------------------------------------------------*/
-@media only screen and (min-width: 1000px) {
-  .site-content .content-area {
-    width: 1080px;
-    height: inherit;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    padding-top: 2%; }
-    .site-content .content-area img {
-      height: 8vmax;
-      width: 100%; }
-      .site-content .content-area img:hover {
-        cursor: pointer; }
-    .site-content .content-area .site-main {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: row wrap;
-              flex-flow: row wrap; }
-      .site-content .content-area .site-main .entry-content {
-        -ms-flex-line-pack: center;
-            align-content: center;
-        line-height: 1.5; }
-        .site-content .content-area .site-main .entry-content > p {
-          font-size: 2.5vmax;
-          font-weight: 200; }
-        .site-content .content-area .site-main .entry-content .p-source {
-          font-size: 1.4vmax; }
-        .site-content .content-area .site-main .entry-content .entry-title {
-          width: 100%;
-          text-align: left;
-          font-size: 3vmax;
-          margin: 1% 0; }
-        .site-content .content-area .site-main .entry-content .archive-content h3 {
-          color: white;
-          font-size: 2.5vmax; }
-        .site-content .content-area .site-main .entry-content .archive-content ul {
-          width: 100%;
-          padding: 0 1%;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
-              -ms-flex-flow: row wrap;
-                  flex-flow: row wrap;
-          -webkit-box-pack: start;
-              -ms-flex-pack: start;
-                  justify-content: flex-start;
-          line-height: 1.5; }
-          .site-content .content-area .site-main .entry-content .archive-content ul li {
-            -webkit-box-flex: 1;
-                -ms-flex: 1 0 auto;
-                    flex: 1 0 auto;
-            margin: 0 1%;
-            font-weight: 500;
-            font-size: 1.5vmax; } }
-
-.site-footer {
-  width: 1080px !important;
-  margin: 0 auto; }
-  .site-footer .menu {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
-    .site-footer .menu li {
-      padding: 0 2%; }
-      .site-footer .menu li:nth-child(2) {
-        border-right: 1px solid white;
-        border-left: 1px solid white; }
-      .site-footer .menu li:nth-child(4) {
-        border-left: 1px solid white; }
-
-.archive-content nav p {
-  font-size: 2vmax; }
-
-.archive-content nav .p-author {
-  font-size: 1vmax; }
-
-.quote-submit .txt-quote {
-  width: 100%; }
-
-.quote-submit .btn-submit {
-  font-size: 1.4vmax; }
-
 a {
   font-family: 'exo';
   text-decoration: none;
@@ -155,7 +52,8 @@ a {
     color: whitesmoke;
     text-decoration: underline; }
 
-.btn-show, .btn-submit {
+.btn-show,
+.btn-submit {
   padding: 2%;
   border: 1px solid #0c0;
   border-radius: 0.5em;
@@ -169,9 +67,9 @@ a {
   font-size: 1.5vmax;
   width: -webkit-max-content;
   width: -moz-max-content;
-  width: max-content;
-  margin: 0 auto; }
-  .btn-show:hover, .btn-submit:hover {
+  width: max-content; }
+  .btn-show:hover,
+  .btn-submit:hover {
     cursor: pointer;
     border-color: wheat;
     -webkit-box-shadow: unset;
@@ -228,7 +126,7 @@ body {
     content: '\f10e';
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
-    left: 14%;
+    left: 12%;
     position: absolute;
     color: #009100; }
   .site-main:after {
@@ -238,7 +136,7 @@ body {
     content: '\f10e';
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-    right: 14%;
+    right: 12%;
     position: absolute;
     color: #009100; }
 
@@ -246,15 +144,19 @@ body {
   color: white; }
 
 .site-footer {
-  width: 1080px; }
+  width: 100%; }
   .site-footer .site-info .menu-site_menu-container {
     width: 100%; }
     .site-footer .site-info .menu-site_menu-container .menu li:nth-child(4):before {
-      content: 'Brought to you by ';
-      color: white; }
+      content: 'Brought to you by';
+      color: white;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      margin-right: 1%; }
 
 .entry-content .txt-response {
-  font-size: 1.5vmax !important;
+  font-size: 1.5vmax;
   display: none; }
 
 .login-required {
@@ -269,7 +171,8 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   line-height: 1.6; }
-  .login-required p, .login-required a {
+  .login-required p,
+  .login-required a {
     font-weight: 100; }
 
 .archive-content {
@@ -291,6 +194,18 @@ body {
   .archive-content > strong {
     margin: 2% 0;
     font-size: 1.5vmax; }
+
+.not-found {
+  margin: 0 auto; }
+
+.page-header {
+  margin: 0 auto;
+  padding: 5% 0;
+  width: 90%; }
+  .page-header .page-title {
+    text-align: left;
+    border-bottom: 1px dotted gray;
+    padding-bottom: 5%; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -524,33 +439,45 @@ th {
 --------------------------------------------------------------*/
 /* Buttons */
 /* Fields */
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-  color: #666;
-  border: 1px solid #ccc;
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+textarea,
+.search-field {
+  color: #0c0;
+  border: 1px solid #0c0;
   border-radius: 3px; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  textarea:focus {
+  input[type='text']:focus,
+  input[type='email']:focus,
+  input[type='url']:focus,
+  input[type='password']:focus,
+  input[type='search']:focus,
+  textarea:focus,
+  .search-field:focus {
     color: #0c0; }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'] {
   padding: 3px; }
 
 textarea {
   padding-left: 3px;
   width: 100%; }
+
+.search-field {
+  border: 1px solid #0c0;
+  border-radius: 0.5em;
+  background: transparent;
+  color: #0c0;
+  padding: 2% 1%;
+  width: 60%; }
+  .search-field:hover, .search-field:focus {
+    border-color: wheat; }
 
 .quote-submit {
   display: -webkit-box;
@@ -565,17 +492,20 @@ textarea {
           justify-content: space-evenly;
   color: white;
   width: 100%; }
-  .quote-submit label textarea, .quote-submit label input {
+  .quote-submit label textarea,
+  .quote-submit label input {
     border: 1px solid #0c0;
     border-radius: 0.5em;
     background: transparent;
     color: #0c0;
     padding: 2% 1%;
     width: 60%; }
-    .quote-submit label textarea:hover, .quote-submit label textarea:focus, .quote-submit label input:hover, .quote-submit label input:focus {
+    .quote-submit label textarea:hover, .quote-submit label textarea:focus,
+    .quote-submit label input:hover,
+    .quote-submit label input:focus {
       border-color: wheat; }
   .quote-submit label p {
-    content: "* Please fill-up the text above, and don`t just leave a blank space";
+    content: '* Please fill-up the text above, and don`t just leave a blank space';
     color: #ff5100;
     display: block;
     clear: both; }
@@ -618,3 +548,307 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+.site-footer {
+  width: 1080px;
+  margin: 0 auto; }
+  .site-footer .menu {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    .site-footer .menu li {
+      padding: 0 2%; }
+      .site-footer .menu li:nth-child(2) {
+        border-right: 1px solid white;
+        border-left: 1px solid white; }
+      .site-footer .menu li:nth-child(4) {
+        border-left: 1px solid white; }
+
+.archive-content nav p {
+  font-size: 2vmax; }
+
+.archive-content nav .p-author {
+  font-size: 1vmax; }
+
+.quote-submit .txt-quote {
+  width: 100%; }
+
+.quote-submit .btn-submit {
+  font-size: 1.4vmax; }
+
+.error-404 {
+  margin: 0 auto; }
+
+.search-form fieldset {
+  border: 0;
+  border-color: transparent; }
+  .search-form fieldset .search-submit {
+    display: hidden;
+    background: transparent;
+    border: 0;
+    content: ''; }
+    .search-form fieldset .search-submit:before {
+      font-family: 'FontAwesome';
+      content: '\f002';
+      color: #0c0; }
+    .search-form fieldset .search-submit:hover {
+      text-decoration: underline; }
+
+@media only screen and (min-width: 1080px) {
+  .site-content .content-area {
+    width: 1080px;
+    height: inherit;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding-top: 2%; }
+    .site-content .content-area img {
+      height: 8vmax;
+      width: 100%; }
+      .site-content .content-area img:hover {
+        cursor: pointer; }
+    .site-content .content-area .site-main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap; }
+      .site-content .content-area .site-main .entry-content {
+        -ms-flex-line-pack: center;
+            align-content: center;
+        line-height: 1.5; }
+        .site-content .content-area .site-main .entry-content > p {
+          font-size: 2.5vmax;
+          font-weight: 200; }
+        .site-content .content-area .site-main .entry-content .p-source {
+          font-size: 1.4vmax; }
+        .site-content .content-area .site-main .entry-content .entry-title {
+          width: 100%;
+          text-align: left;
+          font-size: 3vmax;
+          margin: 1% 0; }
+        .site-content .content-area .site-main .entry-content .archive-content h3 {
+          color: white;
+          font-size: 2.5vmax; }
+        .site-content .content-area .site-main .entry-content .archive-content ul {
+          width: 100%;
+          padding: 0 1%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-flow: row wrap;
+                  flex-flow: row wrap;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          line-height: 1.5; }
+          .site-content .content-area .site-main .entry-content .archive-content ul li {
+            -webkit-box-flex: 1;
+                -ms-flex: 1 0 auto;
+                    flex: 1 0 auto;
+            margin: 0 1%;
+            font-weight: 500;
+            font-size: 1.5vmax; } }
+
+@media only screen and (min-width: 250px) and (max-width: 619px) and (orientation: landscape), screen and (min-width: 250px) and (max-width: 619px) and (orientation: portrait) {
+  .hfeed .site-content {
+    width: 100%;
+    margin: 0; }
+    .hfeed .site-content .content-area {
+      width: 100%;
+      height: inherit; }
+      .hfeed .site-content .content-area .qod-logo,
+      .hfeed .site-content .content-area .img-quote {
+        width: inherit;
+        height: 5vmax;
+        margin: 5% auto; }
+      .hfeed .site-content .content-area .site-main {
+        width: 100%;
+        display: block; }
+        .hfeed .site-content .content-area .site-main nav p {
+          font-size: 2.8vmax;
+          line-height: 1.5; }
+        .hfeed .site-content .content-area .site-main nav .p-author {
+          font-size: 2.2vmax;
+          font-weight: 100;
+          -webkit-text-decoration: italic;
+                  text-decoration: italic; }
+        .hfeed .site-content .content-area .site-main .entry-content {
+          line-height: 1.5; }
+          .hfeed .site-content .content-area .site-main .entry-content .quote-submit input {
+            width: 100%; }
+          .hfeed .site-content .content-area .site-main .entry-content .quote-submit .btn-submit {
+            font-size: 3vmax;
+            margin: 5% auto; }
+          .hfeed .site-content .content-area .site-main .entry-content .btn-show {
+            font-size: 3vmax;
+            margin: 15% auto; }
+          .hfeed .site-content .content-area .site-main .entry-content .entry-title {
+            margin: 0; }
+          .hfeed .site-content .content-area .site-main .entry-content .archive-content ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+            margin: 0;
+            padding: 0 2%; }
+            .hfeed .site-content .content-area .site-main .entry-content .archive-content ul li {
+              margin-right: 1em; }
+        .hfeed .site-content .content-area .site-main:after, .hfeed .site-content .content-area .site-main:before {
+          display: none; }
+        .hfeed .site-content .content-area .site-main .not-found {
+          margin: 0;
+          width: 100%; }
+          .hfeed .site-content .content-area .site-main .not-found .page-header {
+            width: 100%;
+            padding: 0; }
+          .hfeed .site-content .content-area .site-main .not-found .page-content p {
+            font-weight: 200; }
+  .hfeed .site-footer {
+    width: 100%;
+    padding: 0 3%; }
+    .hfeed .site-footer .menu {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      margin: 0;
+      padding: 0;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+      .hfeed .site-footer .menu li {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+        padding: 0;
+        margin: 2% 0; }
+        .hfeed .site-footer .menu li a {
+          padding: 0 0.5em; }
+        .hfeed .site-footer .menu li:nth-child(4) {
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          width: 100%;
+          border: 0; }
+          .hfeed .site-footer .menu li:nth-child(4):before {
+            width: -webkit-max-content;
+            width: -moz-max-content;
+            width: max-content;
+            margin-right: 0.5em; } }
+
+@media only screen and (min-width: 620px) and (max-width: 1079px) and (orientation: landscape), screen and (min-width: 620px) and (max-width: 1079px) and (orientation: portrait) {
+  .hfeed .site-content .content-area .img-quote {
+    height: 10vmax;
+    width: 100%;
+    margin: 0 auto; }
+  .hfeed .site-content .content-area .site-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    width: 100%;
+    padding: 0 5%; }
+    .hfeed .site-content .content-area .site-main:before, .hfeed .site-content .content-area .site-main:after {
+      display: none; }
+    .hfeed .site-content .content-area .site-main .entry-content p {
+      font-size: 5vmax; }
+    .hfeed .site-content .content-area .site-main .entry-content .p-source {
+      font-size: 2.6vmax; }
+  .hfeed .site-content .entry-content .btn-show {
+    margin: 5% 0; }
+  .hfeed .site-content .quote-submit input {
+    width: 60%; }
+  .hfeed .site-content .quote-submit .btn-submit {
+    margin: 2% 0;
+    font-size: 2.5vmax; }
+  .site-footer {
+    padding: 0 1%;
+    width: 100%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+    .site-footer .site-info {
+      width: 100%; }
+    .site-footer .menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      padding: 0; }
+      .site-footer .menu li {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        margin-right: 1%;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        .site-footer .menu li:nth-child(3) {
+          border-right: 1px solid #fff;
+          height: -webkit-fit-content;
+          height: -moz-fit-content;
+          height: fit-content;
+          width: -webkit-max-content;
+          width: -moz-max-content;
+          width: max-content; }
+        .site-footer .menu li:nth-child(4) {
+          border: 0; }
+        .site-footer .menu li a {
+          width: -webkit-max-content;
+          width: -moz-max-content;
+          width: max-content;
+          text-align: center;
+          padding: 0; }
+  .archive-content ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
+    .archive-content ul li {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto;
+      margin: 1% 2%; } }

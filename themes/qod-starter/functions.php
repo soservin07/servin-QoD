@@ -73,8 +73,7 @@ function qod_scripts()
 		'home_url' => home_url(),
 		'nonce' => wp_create_nonce('wp_rest'),
 		'success' => 'Thanks, your submission was received!',
-		'failure' => 'Your submission could not be processed.',
-		'post_id'=>get_the_ID()
+		'failure' => 'Your submission have not been processed.'
 		// 'data' => get_posts('numberposts=-1')
 	));
 	//here is where you localized script code will go

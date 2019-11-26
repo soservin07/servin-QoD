@@ -1,12 +1,6 @@
-
-
 (function($) {
-
-
   let $restUrl, $data;
   let $site_title;
-
-
 
   $restUrl =
     api_vars.rest_url +
@@ -14,7 +8,7 @@
   // if (window.location.href == api_vars.home_url + '/') {
   // } else {
   // }
- 
+
   $site_title = jQuery(location).attr('href');
   $site_title = $site_title.replace(api_vars.home_url + '/', '');
   $site_title = $site_title.replace('/', '');
@@ -26,9 +20,9 @@
     case 'archives':
       // doajax();
       break;
-      case 'submit':
-        checkUser();
-        checkNull('.quote-submit :input');
+    case 'submit':
+      checkUser();
+      checkNull('.quote-submit :input');
       break;
     default:
       doajax();
@@ -56,10 +50,10 @@
     console.log(api_vars.home_url + '/' + $data[0]['slug']);
   });
   $(document).on('click', '.btn-submit', function(e) {
-    console.log('have been clicked!');
-    e.preventDefault();
+    // console.log('have been clicked!');
+
     postQuote();
-    
+    e.preventDefault();
   });
 
   $(document).on('click', '.img-quote', function(e) {
@@ -94,58 +88,73 @@
       });
   }
 
-  function checkUser(){
-    let $tmpBool=document.querySelector('body').classList.contains('admin-bar');
+  function checkUser() {
+    let $tmpBool = document
+      .querySelector('body')
+      .classList.contains('admin-bar');
 
     // alert($tmpBool);
-    if(!$tmpBool){
-      $('.entry-content').css({display:'none'});
-      $('.login-required').css({display:'block'});
+    if (!$tmpBool) {
+      $('.entry-content').css({ display: 'none' });
+      $('.login-required').css({ display: 'block' });
       // alert($('body').hasClass('admin-bar'));
-
 
       return;
     }
-    $('.entry-content').css({display:'block'});
-    $('.login-required').css({display:'none'});
-    
-      // alert($('body').hasClass('admin-bar'));
+    $('.entry-content').css({ display: 'block' });
+    $('.login-required').css({ display: 'none' });
+
+    // alert($('body').hasClass('admin-bar'));
   }
-  function checkNull($form){
-    $(document).on('blur',$form,function(e){
-      if($(this).attr('class')=='txt-url' ||  $(this).attr('class')=='txt-where' ){
+  function checkNull($form) {
+    $(document).on('blur', $form, function(e) {
+      if (
+        $(this).attr('class') == 'txt-url' ||
+        $(this).attr('class') == 'txt-where'
+      ) {
         return;
       }
-      $txtbox=$.trim( $(this).val());
-      if($txtbox.length==0|| $txtbox==null || $txtbox==''){
-        $(this).siblings().remove('.input-after');
+      $txtbox = $.trim($(this).val());
+      if ($txtbox.length == 0 || $txtbox == null || $txtbox == '') {
         $(this)
-        .parent().append('<p class="input-after">* Please fill-up the text above, and dont just leave a blank space</p>');
-        
+          .siblings()
+          .remove('.input-after');
+        $(this)
+          .parent()
+          .append(
+            '<p class="input-after">* Please fill-up the text above, and dont just leave a blank space</p>'
+          );
+      } else {
+        $(this)
+          .siblings()
+          .remove('.input-after');
       }
-      else{
-        $(this).siblings().remove('.input-after');
-      }
-       e.preventDefault();
+      e.preventDefault();
     });
   }
 
-  function postQuote(){
+  function postQuote() {
+    console.log(api_vars.rest_url + 'wp/v2/posts/');
     $.ajax({
-      method: 'post',
+      method: 'POST',
       url: api_vars.rest_url + 'wp/v2/posts/',
       data: {
-         title: 'test-title',
-         content:'test content',
-         post_stauts:'publish',
-         _qod_quote_source:'test-source',
-         _qod_quote_source_url:'test-source-url.com'
+        title: $('.txt-author').val(),
+        content: $('.txt-quote').val(),
+        _qod_quote_source: $('.txt-where').val(),
+        _qod_quote_source_url: $('.txt-url').val()
       },
       beforeSend: function(xhr) {
-         xhr.setRequestHeader( 'X-WP-Nonce', red_vars.wpapi_nonce );
+        xhr.setRequestHeader('X-WP-Nonce', api_vars.nonce);
       }
-   }).done( function(response) {
-      alert('Success! Comments are closed for this post.');
-   });
+    })
+      .done(function(response) {
+        alert('Post Comment Success! Redirecting to Home Page Now');
+        window.location.replace(api_vars.home_url);
+        XMLHttpRequest.abort();
+      })
+      .fail(function(e) {
+        console.log(api_vars.failure + ' ' + e.Message);
+      });
   }
 })(jQuery);

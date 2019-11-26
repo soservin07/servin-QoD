@@ -33,61 +33,76 @@
 
 /* Fields */
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+textarea,
+.search-field {
+  color: #0c0;
+  border: 1px solid #0c0;
+  border-radius: 3px;
 
-	&:focus {
-		color:#0c0;
-	}
+  &:focus {
+    color: #0c0;
+  }
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-	padding: 3px;
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'] {
+  padding: 3px;
 }
 
 textarea {
-	padding-left: 3px;
-	width: 100%;
+  padding-left: 3px;
+  width: 100%;
+}
+//******************* 404 PAGE
+.search-field {
+  border: 1px solid #0c0;
+  border-radius: 0.5em;
+  background: transparent;
+  color: #0c0;
+  padding: 2% 1%;
+  width: 60%;
+  &:hover,
+  &:focus {
+    border-color: wheat;
+  }
 }
 //*******************SUBMIT QUOTE FORM
-.quote-submit{
-	display:flex;
-	flex-flow: column nowrap;
-	justify-content: space-evenly;
-	color:white;
-	width:100%;
-	label{
-			textarea, input{
-			border:1px solid #0c0;
-			border-radius: 0.5em;
-			background:transparent;
-			color:#0c0;
-			padding:2% 1%;
-			width:60%;
-			&:hover,&:focus{
-				border-color:wheat;
-			}
-			
-		}
-		p{
-			content:"* Please fill-up the text above, and don`t just leave a blank space";
-			color:rgb(255, 81, 0);
-			display:block;
-			clear:both;
-		}
-	}
-	&> *{
-		margin:1% 0;
-	}
+.quote-submit {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  color: white;
+  width: 100%;
+  label {
+    textarea,
+    input {
+      border: 1px solid #0c0;
+      border-radius: 0.5em;
+      background: transparent;
+      color: #0c0;
+      padding: 2% 1%;
+      width: 60%;
+      &:hover,
+      &:focus {
+        border-color: wheat;
+      }
+    }
+    p {
+      content: '* Please fill-up the text above, and don`t just leave a blank space';
+      color: rgb(255, 81, 0);
+      display: block;
+      clear: both;
+    }
+  }
+  & > * {
+    margin: 1% 0;
+  }
 }

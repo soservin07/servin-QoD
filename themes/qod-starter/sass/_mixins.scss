@@ -1,122 +1,367 @@
 //SIZE TEMPLATES
-@mixin for_phone($size) {
-  @media only screen and (min-width: $size) {
-  }
-}
-@mixin for_tablet($size) {
-  @media only screen and (min-width: $size) {
+// @mixin for_phone($size) {
+//   @if ($size<=619) {
+//     @media screen and (min-width: $size+'px') {
+//       //**************404 page
+//     }
+//   }
+// }
+// @mixin for_tablet($size) {
+//   @if ($size<=1079) {
+//     @media screen and (min-width: $size+'px') {
+//     }
+//   }
+// }
+
+// @mixin for_desktop($size) {
+//   @media only screen and (min-width: $size) and (width: $size) {
+//   }
+// }
+//***** CALL size TEMPLATES
+// @include for_phone(250);
+// @include for_tablet(620);
+// @include for_desktop(1000);
+
+@mixin show_desktop() {
+  .site-content {
+    .content-area {
+      width: 1080px;
+      height: inherit;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+      padding-top: 2%;
+      img {
+        height: 8vmax;
+        width: 100%;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .site-main {
+        display: flex;
+        flex-flow: row wrap;
+        .entry-content {
+          align-content: center;
+          line-height: 1.5;
+          & > p {
+            font-size: 2.5vmax;
+            font-weight: 200;
+          }
+          .p-source {
+            font-size: 1.4vmax;
+          }
+          .entry-title {
+            width: 100%;
+            text-align: left;
+            font-size: 3vmax;
+            margin: 1% 0;
+          }
+          .archive-content {
+            h3 {
+              color: white;
+              font-size: 2.5vmax;
+            }
+            ul {
+              width: 100%;
+              padding: 0 1%;
+              display: flex;
+              flex-flow: row wrap;
+              justify-content: flex-start;
+              line-height: 1.5;
+              li {
+                flex: 1 0 auto;
+                margin: 0 1%;
+                font-weight: 500;
+                font-size: 1.5vmax;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-@mixin for_desktop($size) {
-  @media only screen and (min-width: $size) {
+.site-footer {
+  width: 1080px;
+  margin: 0 auto;
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    li {
+      padding: 0 2%;
+      &:nth-child(2) {
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+      }
+      &:nth-child(4) {
+        // border-right: 1px solid white;
+        border-left: 1px solid white;
+      }
+    }
+  }
+}
+//*************archive-categories
+.archive-content {
+  nav {
+    p {
+      font-size: 2vmax;
+    }
+    .p-author {
+      font-size: 1vmax;
+    }
+  }
+}
+
+//*******************SUBMIT QUOTE FORM
+.quote-submit {
+  .txt-quote {
+    width: 100%;
+  }
+  .btn-submit {
+    font-size: 1.4vmax;
+  }
+}
+//**********************for 404 PAGE
+.error-404 {
+  margin: 0 auto;
+}
+.search-form {
+  fieldset {
+    border: 0;
+    border-color: transparent;
+    .search-submit {
+      display: hidden;
+      background: transparent;
+      border: 0;
+      content: '';
+      &:before {
+        font-family: 'FontAwesome';
+        content: '\f002';
+        color: #0c0;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+@mixin show_tablet() {
+  .hfeed {
     .site-content {
       .content-area {
-        width: 1080px;
-        height: inherit;
-        margin: 0 auto;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-evenly;
-        padding-top: 2%;
-        img {
-          height: 8vmax;
+        .img-quote {
+          height: 10vmax;
           width: 100%;
-          &:hover {
-            cursor: pointer;
-          }
+          margin: 0 auto;
         }
         .site-main {
           display: flex;
-          flex-flow: row wrap;
+          flex-flow: column nowrap;
+          width: 100%;
+          padding: 0 5%;
+          &:before,
+          &:after {
+            display: none;
+          }
           .entry-content {
-            align-content: center;
-            line-height: 1.5;
-            & > p {
-              font-size: 2.5vmax;
-              font-weight: 200;
+            p {
+              font-size: 5vmax;
             }
             .p-source {
-              font-size: 1.4vmax;
+              font-size: 2.6vmax;
+            }
+          }
+        }
+      }
+
+      .entry-content {
+        .btn-show {
+          margin: 5% 0;
+        }
+      }
+      //****************Submit quote form
+
+      .quote-submit {
+        input {
+          width: 60%;
+        }
+        .btn-submit {
+          margin: 2% 0;
+          font-size: 2.5vmax;
+        }
+      }
+    }
+  }
+  //********************SITE FOOTER
+  .site-footer {
+    padding: 0 1%;
+    width: 100%;
+    display: inline-flex;
+    .site-info {
+      width: 100%;
+    }
+    .menu {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      padding: 0;
+      li {
+        height: fit-content;
+        margin-right: 1%;
+        flex: 1 0 auto;
+        display: inline-flex;
+        justify-content: center;
+        &:nth-child(3) {
+          border-right: 1px solid #fff;
+          height: fit-content;
+          width: max-content;
+        }
+        &:nth-child(4) {
+          border: 0;
+        }
+        a {
+          width: max-content;
+          text-align: center;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .archive-content {
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      li {
+        flex: 1 0 auto;
+        margin: 1% 2%;
+      }
+    }
+  }
+}
+@mixin show_phone() {
+  .hfeed {
+    .site-content {
+      width: 100%;
+      margin: 0;
+
+      .content-area {
+        width: 100%;
+        height: inherit;
+        .qod-logo,
+        .img-quote {
+          width: inherit;
+          height: 5vmax;
+          margin: 5% auto;
+        }
+        .site-main {
+          width: 100%;
+          display: block;
+          nav {
+            p {
+              font-size: 2.8vmax;
+              line-height: 1.5;
+            }
+            .p-author {
+              font-size: 2.2vmax;
+              font-weight: 100;
+              text-decoration: italic;
+            }
+          }
+          .entry-content {
+            line-height: 1.5;
+            .quote-submit {
+              input {
+                width: 100%;
+              }
+              .btn-submit {
+                font-size: 3vmax;
+                margin: 5% auto;
+              }
+            }
+            .btn-show {
+              font-size: 3vmax;
+              margin: 15% auto;
             }
             .entry-title {
-              width: 100%;
-              text-align: left;
-              font-size: 3vmax;
-              margin: 1% 0;
+              margin: 0;
             }
             .archive-content {
-              h3 {
-                color: white;
-                font-size: 2.5vmax;
-              }
               ul {
-                width: 100%;
-                padding: 0 1%;
                 display: flex;
                 flex-flow: row wrap;
-                justify-content: flex-start;
-                line-height: 1.5;
+                margin: 0;
+                padding: 0 2%;
                 li {
-                  flex: 1 0 auto;
-                  margin: 0 1%;
-                  font-weight: 500;
-                  font-size: 1.5vmax;
+                  margin-right: 1em;
                 }
               }
             }
           }
+
+          &:after,
+          &:before {
+            display: none;
+          }
+          .not-found {
+            margin: 0;
+            width: 100%;
+            .page-header {
+              width: 100%;
+              padding: 0;
+            }
+            .page-content {
+              p {
+                font-weight: 200;
+              }
+            }
+          }
         }
       }
     }
-  }
 
-  .site-footer {
-    width: 1080px !important;
-    margin: 0 auto;
-    .menu {
+    .site-footer {
       width: 100%;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: flex-end;
-      li {
-        padding: 0 2%;
-        &:nth-child(2) {
-          border-right: 1px solid white;
-          border-left: 1px solid white;
+      padding: 0 3%;
+      .menu {
+        flex-flow: row wrap;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-content: center;
+        li {
+          flex: 0 1 auto;
+          padding: 0;
+          margin: 2% 0;
+          a {
+            padding: 0 0.5em;
+          }
+          &:nth-child(4) {
+            display: inline-flex;
+            width: 100%;
+            border: 0;
+            &:before {
+              width: max-content;
+              margin-right: 0.5em;
+            }
+          }
         }
-        &:nth-child(4) {
-          // border-right: 1px solid white;
-          border-left: 1px solid white;
-        }
       }
     }
   }
-  //*************archive-categories
-  .archive-content{
-    nav{
-      p{
-        font-size: 2vmax;
-      }
-      .p-author{
-        font-size: 1vmax;
-      }
-    }
-  }
-
-  //*******************SUBMIT QUOTE FORM
-  .quote-submit{
-    .txt-quote{
-      width:100%;
-    }
-    .btn-submit{
-      font-size:1.4vmax;
-    }
-  }
-
-  
 }
-//***** CALL size TEMPLATES
-@include for_phone('250px');
-@include for_tablet('620px');
-@include for_desktop('1000px');
+@media only screen and (min-width: 1080px) {
+  @include show_desktop();
+}
+@media only screen and (min-width: 250px) and (max-width: 619px) and (orientation: landscape),
+  screen and (min-width: 250px) and (max-width: 619px) and (orientation: portrait) {
+  @include show_phone();
+}
+@media only screen and (min-width: 620px) and (max-width: 1079px) and (orientation: landscape),
+  screen and (min-width: 620px) and (max-width: 1079px) and (orientation: portrait) {
+  @include show_tablet();
+}

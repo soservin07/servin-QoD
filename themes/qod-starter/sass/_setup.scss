@@ -10,7 +10,8 @@ a {
     text-decoration: underline;
   }
 }
-.btn-show, .btn-submit {
+.btn-show,
+.btn-submit {
   padding: 2%;
   border: 1px solid #0c0;
   border-radius: 0.5em;
@@ -21,8 +22,8 @@ a {
   box-shadow: unset;
   text-shadow: unset;
   font-size: 1.5vmax;
-  width:max-content;
-  margin:0 auto;
+  width: max-content;
+  // margin: 0 auto;
   &:hover {
     cursor: pointer;
     border-color: wheat;
@@ -42,7 +43,7 @@ li {
   list-style-type: none;
 }
 body {
-  color:white;
+  color: white;
   background: #222;
 }
 .site-content {
@@ -59,7 +60,6 @@ body {
   font-weight: 200;
   display: inline-flex;
   color: white;
-  
 }
 .entry-content {
   width: 100%;
@@ -77,7 +77,7 @@ body {
     font-size: 10vmax;
     content: '\f10e';
     transform: rotate(180deg);
-    left: 14%;
+    left: 12%;
     position: absolute;
     // line-height: 10vh;
     // top: 0;
@@ -89,7 +89,7 @@ body {
     font-size: 10vmax;
     content: '\f10e';
     transform: rotate(360deg);
-    right: 14%;
+    right: 12%;
     position: absolute;
     // line-height: 10vh;
     // top: 0;
@@ -104,16 +104,18 @@ body {
 }
 
 .site-footer {
-  width:1080px;
+  width: 100%;
   .site-info {
     .menu-site_menu-container {
       width: 100%;
-      .menu{
-        li{
-          &:nth-child(4){
-            &:before{
-              content:'Brought to you by ';
-              color:white;
+      .menu {
+        li {
+          &:nth-child(4) {
+            &:before {
+              content: 'Brought to you by';
+              color: white;
+              width: max-content;
+              margin-right: 1%;
             }
           }
         }
@@ -122,42 +124,56 @@ body {
   }
 }
 
-
 //****************SUBMIT QUOTE FORM
-.entry-content{
-  .txt-response{
-    font-size:1.5vmax !important;
-    display:none;
+.entry-content {
+  .txt-response {
+    font-size: 1.5vmax;
+    display: none;
   }
 }
 
-.login-required{
-  padding:10% 0;
+.login-required {
+  padding: 10% 0;
   display: flex;
-  flex-flow:column nowrap;
+  flex-flow: column nowrap;
   justify-content: space-around;
   line-height: 1.6;
-  
-  p,a{
-    font-weight: 100;
 
+  p,
+  a {
+    font-weight: 100;
   }
-  
 }
 
 //*******************archive-CATEGORIES
-.archive-content{
-  display:flex;
-  flex-flow:column nowrap;
+.archive-content {
+  display: flex;
+  flex-flow: column nowrap;
   justify-content: space-between;
   padding: 2% 0;
-  nav{
+  nav {
     padding: 3% 1%;
-    border-top:1px dotted gray;
-    border-bottom:1px dotted gray;
+    border-top: 1px dotted gray;
+    border-bottom: 1px dotted gray;
   }
-  & >strong{
+  & > strong {
     margin: 2% 0;
     font-size: 1.5vmax;
+  }
+}
+
+//*******************search page
+
+.not-found {
+  margin: 0 auto;
+}
+.page-header {
+  margin: 0 auto;
+  padding: 5% 0;
+  width: 90%;
+  .page-title {
+    text-align: left;
+    border-bottom: 1px dotted gray;
+    padding-bottom: 5%;
   }
 }

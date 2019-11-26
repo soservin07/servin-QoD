@@ -15,7 +15,7 @@ $imgArray = get_field('qod_logo');
     <main id="main" class="site-main" role="main">
         <?php //get_template_part('template-parts/content', 'single');
         ?>
-        <img src="<?php print $imgArray['url']; ?>" alt="quotes on dev">
+        <img src="<?php print $imgArray['url']; ?>" alt="quotes on dev" class="img-quote">
         <section class="entry-content">
 
             <p class="p-source">
